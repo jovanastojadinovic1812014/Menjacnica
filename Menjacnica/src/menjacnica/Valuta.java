@@ -9,6 +9,9 @@ public class Valuta {
 	}
 
 	public void setNazivValute(String nazivValute) {
+		if (nazivValute == null || nazivValute.isEmpty()) {
+			throw new RuntimeException("Greska prilikom unosa naziva valute!");
+		}
 		this.nazivValute = nazivValute;
 	}
 
@@ -17,6 +20,9 @@ public class Valuta {
 	}
 
 	public void setSkraceniNazivValute(String skraceniNazivValute) {
+		if (skraceniNazivValute == null || skraceniNazivValute.isEmpty()) {
+			throw new RuntimeException("Greska prilikom unosa skracenog naziva valute!");
+		}
 		this.skraceniNazivValute = skraceniNazivValute;
 	}
 
